@@ -18,7 +18,7 @@ soup = BeautifulSoup(html,'html.parser')
 tags = soup('a')
 for i in range(0,count):
     htmlString=tags[positon-1].get('href',None)
-    #print(htmlString)
+    print('Retrieving:',htmlString)
     html=urllib.request.urlopen(htmlString).read()
     names.append(tags[positon-1].contents[0])
     soup = BeautifulSoup(html,'html.parser')
